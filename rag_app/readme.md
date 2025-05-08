@@ -157,3 +157,8 @@ tqdm
 
 A Postman collection is attached to this project for easy testing of the API endpoints.  
 You can import it into Postman and test all endpoints including file upload, document retrieval, and search
+
+## Run test cases
+```bash
+pytest test_main.py
+```
