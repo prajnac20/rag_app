@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "2aafbc3e-3843-4047-88be-6cb863207dd5",
+		"name": "rag_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10103055"
+	},
+	"item": [
+		{
+			"name": "upload_document",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/prajn/Desktop/work/sample.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/upload_document/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upload_document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_documents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/prajn/Desktop/work/sample.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/get_all_documents/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_all_documents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document_id",
+							"value": "sample",
+							"type": "text"
+						},
+						{
+							"key": "query",
+							"value": "Tell me about mental health and counselling",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/search_document/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search_document",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
